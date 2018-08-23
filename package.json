@@ -1,0 +1,26 @@
+{
+  "name": "gulu-demo.git",
+  "version": "1.0.0",
+  "description": "gulu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nycaozhongshe/gulu-demo.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "caozhongshe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nycaozhongshe/gulu-demo/issues"
+  },
+  "homepage": "https://github.com/nycaozhongshe/gulu-demo#readme",
+  "dependencies": {
+    "vue": "^2.5.17"
+  }
+}
