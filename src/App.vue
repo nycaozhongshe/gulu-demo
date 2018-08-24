@@ -1,19 +1,54 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <g-button icon-name="download"
+              :loading="false"
+              icon-position="right"
+              @click="click"
+              :disabled="true">
+      提交
+    </g-button>
+    <g-button-group>
+        <g-button>
+          上一页
+        </g-button>
+        <g-button>
+          更多
+        </g-button>
+        <g-button>
+          下一页
+        </g-button>
+    </g-button-group>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import button from './components/button.vue';
+import buttonGroup from './components/buttonGroup.vue';
 
 export default {
-  name: "app",
+  name: 'app',
   components: {
-    HelloWorld
+    'g-button': button,
+    'g-button-group': buttonGroup
+  },
+  methods: {
+    click() {
+      console.log('tag', 'click');
+    }
   }
 };
 </script>
 
 <style lang="scss">
+:root {
+  --main-color: red;
+  --button-height: 32px;
+  --font-size: 14px;
+  --button-bg: white;
+  --button-active-bg: #eee;
+  --border-radius: 4px;
+  --color: #333;
+  --border-color: #999;
+  --border-color-hover: #666;
+}
 </style>
