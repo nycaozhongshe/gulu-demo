@@ -50,7 +50,6 @@ export default {
   computed: {},
 
   mounted() {
-    console.log(this.$attrs, '');
   },
 
   created() {},

@@ -8,15 +8,15 @@
       提交
     </g-button>
     <g-button-group>
-        <g-button>
-          上一页
-        </g-button>
-        <g-button>
-          更多
-        </g-button>
-        <g-button>
-          下一页
-        </g-button>
+      <g-button>
+        上一页
+      </g-button>
+      <g-button>
+        更多
+      </g-button>
+      <g-button>
+        下一页
+      </g-button>
     </g-button-group>
   </div>
 </template>
@@ -24,18 +24,22 @@
 <script>
 import button from './components/button.vue';
 import buttonGroup from './components/buttonGroup.vue';
-
+import toast from './components/toast';
 export default {
   name: 'app',
   components: {
     'g-button': button,
-    'g-button-group': buttonGroup
+    'g-button-group': buttonGroup,
+    toast
   },
   methods: {
     click() {
-      console.log('tag', 'click');
     }
-  }
+  },
+  mounted() {
+    console.log(this.$toast(111))
+    // console.log(this.$toast());
+  },
 };
 </script>
 
