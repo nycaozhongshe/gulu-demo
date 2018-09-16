@@ -14,32 +14,54 @@
         <g-button>
           更多
         </g-button>
-        <g-button>
+        <g-button @click="message++">
           下一页
         </g-button>
     </g-button-group>
+    <br>
+    <br>
+
+    <g-input :value="'aaa'">  
+    </g-input >  
+      <g-input :value="'aaa'" disabled>  
+    </g-input >  
+       <g-input :value="'aaa'" readonly>  
+    </g-input > 
+
+      <g-input  error v-model="message">  
+    </g-input > 
+    {{message}}
+    <div id="test"></div>
   </div>
 </template>
 
 <script>
-import button from './components/button.vue';
-import buttonGroup from './components/buttonGroup.vue';
-
+import button from "./components/button.vue";
+import buttonGroup from "./components/buttonGroup.vue";
+import input from "./components/input.vue";
 export default {
-  name: 'app',
+  name: "app",
+  data() {
+    return {
+      message: "11"
+    };
+  },
   components: {
-    'g-button': button,
-    'g-button-group': buttonGroup
+    "g-button-group": buttonGroup,
+    "g-input": input
   },
   methods: {
     click() {
-      console.log('tag', 'click');
+      console.log("tag", "click");
     }
   }
 };
 </script>
 
 <style lang="scss">
+* {
+  box-sizing: border-box;
+}
 :root {
   --main-color: red;
   --button-height: 32px;
